@@ -1,0 +1,22 @@
+@extends('layouts.app3')
+@section('content')
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+            <div class="card card-dark  card-outline">
+                <div class="card-header">
+                 <h3 class="card-title">Edit Department</h3>
+                </div>
+                <div class="card-body pad">
+                    {{ Form::model($department, ['method'=>'PATCH', 'route' => ['department.update', $department->id], 'enctype'=>'multipart/form-data']) }}
+                        @include('admin.department.form', ['submitButtonText'=>'Update'])
+                    {{ Form::close() }}
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<script>
+// CKEDITOR.replace( 'description' );
+</script>
+@endsection

@@ -1,0 +1,4 @@
+php artisan make:event PatientVerificationEvent
+php artisan make:listener SendPatientConfirmationEmail --event=PatientVerificationEvent
+
+php artisan make:mail emailVerfifyForPatient
